@@ -54,58 +54,51 @@ controle. */
 
 int main() {
     int num, hexa, contador, limite;
+    printf("%d ", 0);
     for (hexa = 0; hexa <= 15; hexa++) {
         printf("%x ", hexa);
     }
     printf("\n");
 
     contador = 0;
-    limite = 14;
-    for (hexa = 1; hexa <= 15; hexa++) {
+    limite = 15;
+    for (hexa = 0; hexa <= 15; hexa++) {
        printf("%x ", hexa);
        for (num = contador; num <= limite; num++) {
             if (num < 32){
                 printf("%c ", 32);
             }
-            else if (num <= 127) {
+            else {
                 printf("%c ", num);
             } 
-            else {
-                break;
-            }
         }
         contador = num;
-        limite = num + 14;
+        limite = num + 15;
         printf("\n");
     }
     printf("\n");
 }
-
 //Outra forma de resolver o Exercício 4:
 
 #include <stdio.h>
 
 int main() {
     int num, hexa;
+    printf("%x ", 0);
     for (hexa = 0; hexa <= 15; hexa++) {
         printf("%x ", hexa);
     }
-    printf("\n");
-    printf("%x ", 1);
-    for (num = 0, hexa = 2; hexa <= 15; num++) {
-            if (num != 0 && num % 15 == 0){
+    for (num = 0, hexa = 0; num <= 255; num++) {
+            if (num % 16 == 0) {
                 printf("\n");
                 printf("%x ", hexa);
                 hexa++;
             }
-            if (num < 32){
+            if (num < 32) {
                 printf("%c ", 32);
             }
-            else if (num <= 127) {
-                printf("%c ", num);
-            }
             else {
-                continue;
+                printf("%c ", num);
             }
         }
     printf("\n");
