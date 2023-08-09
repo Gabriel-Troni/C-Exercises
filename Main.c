@@ -44,7 +44,7 @@ int main(void)
 //----------------------------------------------------------------------------------//
 
 //Exercício 4
-/* Faça um programa que apresente a tabela ASCII (0 a 255), no formato de 16 linhas por 16
+/* Faça um programa que apresente a tabela ASCII (0 a 127), no formato de 16 linhas por 16
 colunas, tendo a 1° linha e a 1° coluna rotulada com o valor em hexadecimal de 0 a F. A
 primeira célula terá o símbolo com código 0, a segunda com código 1 e assim por diante.
 Obs: Inicialmente, substitua os valores < 32 por 32, para evitar a impressão dos códigos de
