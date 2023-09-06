@@ -93,3 +93,94 @@ int main() {
     printf("%d", maior);
     return 0;
 }
+
+// Exercício 7
+/* Faça um programa que leia uma lista de números inteiros terminados por 0, para 
+cada número lido o programa deve informar o número e se o número é par ou ímpar. 
+Não utilize vetores/matrizes. mostre apenas "par" ou "impar" (sem acentos). */
+
+#include <stdio.h>
+
+int num;
+
+int main() {
+    while (1) {
+        scanf("%d", &num);
+        if (!num)
+            break;
+        else if (num%2)
+            printf("%d impar", num);
+        else
+            printf("%d par", num);
+    }
+}
+
+//Exercício 8
+/* Faça um programa que leia três números e os apresente em ordem crescente.
+Apresente um número por linha. */
+
+#include <stdio.h>
+
+int i, j, num[3], aux;
+
+int main()
+{
+    //Lê os números
+    for(i=0; i<3; i++)
+    scanf("%d", &num[i]);
+    
+    //Ordena vetor
+    for(i=0; i<2; i++)
+        for(j=0; j<2; j++) {
+            if(num[j]>num[j+1]) {
+                aux=num[j+1];
+                num[j+1]=num[j];
+                num[j]=aux;
+            }
+            
+        }
+    
+    //Imprime resultado
+    for(i=0; i<3; i++)
+    printf("%d\n", num[i]);
+}
+
+//Exercício 9
+/* Faça um programa que leia um número de ponto flutuante e apresente em linhas 
+separadas a parte inteira e a parte fracionária. */
+
+#include <stdio.h>
+
+float num, fracionario; 
+int inteiro;
+
+int main() {
+    scanf("%f", &num);
+    inteiro = (int)num;
+    fracionario = num-inteiro;
+    printf("%d\n%f", inteiro, fracionario);
+}
+
+//Exercício 10
+/* Faça um programa que leia dois números A e B e apresente o maior divisor 
+comum dos dois números. */
+
+#include <stdio.h>
+int maior, menor, aux, divisor;
+
+int main() {
+    scanf("%d", &maior);
+    scanf("%d", &menor);
+    
+    if (menor>maior) {
+        aux=maior;
+        maior=menor;
+        menor=aux;
+    }
+    
+    for(divisor=menor; divisor>0; divisor--)
+        if(menor%divisor==0 && maior%divisor==0) {
+            printf("%d", divisor);
+            break;
+        }
+}
