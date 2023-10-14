@@ -153,6 +153,49 @@ int main(){
 }
 
 // Exercício 7
+/*
+Faça um programa que leia uma String e apresente todos os sufixos da string em ordem léxica.
+Exemplo:
+
+Entrada:
+Banana
+
+Saída:
+
+a
+ana
+anana
+banana
+na
+nana
+*/
+
+#include <stdio.h>
+#include <string.h>
+
+char txt[31], sulfixos[30][31], aux[31];
+int i, j, contador, tam;
+
+int main(){
+fgets(txt, sizeof(txt), stdin);
+tam = strlen(txt);
+for(i=tam; i>1; i--)
+    for(j=0, contador=tam-i; contador<tam-1; contador++, j++)
+        sulfixos[i-2][j] = txt[contador];
+for(i=0; i<tam-1; i++)
+    for(j=0; j<tam-2; j++)
+        if(strcmp(sulfixos[j], sulfixos[j+1])>0){
+            strcpy(aux, sulfixos[j]);
+            strcpy(sulfixos[j], sulfixos[j+1]);
+            strcpy(sulfixos[j+1], aux);
+            
+        }
+for(i=0; i<tam-1; i++)
+    printf("%s\n", sulfixos[i]);
+
+}
+
+// Exercício 8
 /* Faça um programa que leia uma string e apresente os símbolos e a frequência (número de ocorrência 
 de cada símbolo na string lida). O programa deverá apresentar um símbolo e a frequência por linha e 
 omitir os símbolos que não ocorram (frequência zero). Considere o intervalo de 32 a 128 da tabela 
@@ -194,7 +237,7 @@ int main(){
     }
 }
 
-// Exercício 8
+// Exercício 9
 /* Faça um programa que leia duas Strings, verifique se elas formam anagramas, 
 ignorando variação de caixa e espaços em brancos e apresente: “Formam anagramas” 
 ou “Nao formam anagramas”
@@ -265,9 +308,57 @@ int main(){
     printf("Formam anagramas");
 }
 
+// Exercício 10
+/* Faça um programa que leia 10 nomes e apresente os índices do 
+vetor de nomes lidos, de forma, que se forem utilizados na 
+apresentação, os nomes estarão ordenados. Observe que o vetor 
+de nomes não sofre alteração.
 
+Exemplo:
+0 - Pedro
+1 - Ana
+2 - João
+3 – Maria
+Saída ao usar índices[i] para i variando de 0 a 3:
+1
+2
+3
+0
+*/
 
+#include <stdio.h>
+#include <string.h>
 
+char nomes[10][21], limite[21], maiorNome[21];
+int i, j, indices[11];
+
+int main(){
+for(i=0; i<10; i++){
+    fgets(nomes[i], sizeof(nomes[i]), stdin);
+    if(!i || (strcmp(nomes[i], limite)>0)){
+        strcpy(limite, nomes[i]);
+        indices[9] = i;
+    }
+}
+
+maiorNome[0] = '\0';
+for(i=8; i>=0; i--){
+    for(j=0; j<10; j++){
+        if((!maiorNome[0] || strcmp(nomes[j], maiorNome)>0)
+        && (strcmp(nomes[j], limite)<0)){
+            strcpy(maiorNome, nomes[j]);
+            indices[i] = j;
+        }
+    }
+    strcpy(limite, maiorNome);
+    maiorNome[0]='\0';
+}
+
+for(i=0; i<10; i++){
+    printf("%d\n", indices[i]);
+}
+
+}
 
 
 
