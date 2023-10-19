@@ -5,7 +5,12 @@ Os exercícios buscam proporcionar um aprendizado básico em lógica de programa
 The C language exercises presented here are part of the exercise lists for the "Programming Language" course in the Analysis and Systems Development program at UFPR (Federal University of Paraná).
 These exercises aim to provide a foundational understanding of programming logic and C language features, including data types, input and output, arrays, and functions.
 
-# SQL Server
+# PHP
+Os exercícios de PHP fazem parte da disciplina "Desenvolvimento Web 1" do curso de análise e desenvolvimento de sistemas na UFPR. Estes exercícios buscam desenvolver não só a sintaxe e lógica do PHP, mas também conceitos básicos de back-end. Para a resolução dos exercícios utilizei o servidor Apache.
+
+The PHP exercises are part of the 'Web Development 1' course in the Systems Analysis and Development program at UFPR. These exercises aim to develop not only PHP syntax and logic but also fundamental back-end concepts. I used the Apache server for solving the exercises.
+
+# TSQL
 Os treze arquivos na pasta de SQL correspondem aos treze capítulos do livro "Aprendendo SQL" da O'reilly Novatech que possuem exercícios práticos.
 Este livro abrange a linguagem SQL em geral com enfoque nos SGBDs MySQL, SQL Server e Oracle Database.
 Apesar de os exercícios terem sido feitos com o padrão MySQL, resolvi todos eles usando o SQL Server e os disponibilizo aqui (também resolvi alguns com o mySQL, em terminal, 
