@@ -5,6 +5,11 @@ Os exercícios buscam proporcionar um aprendizado básico em lógica de programa
 The C language exercises presented here are part of the exercise lists for the "Programming Language" course in the Analysis and Systems Development program at UFPR (Federal University of Paraná).
 These exercises aim to provide a foundational understanding of programming logic and C language features, including data types, input and output, arrays, and functions.
 
+# Javascript
+Os exercícios de Javascript foram feitos durante um curso básico-intermediário da Digital Inovation One (DIO). Os exercícios não possuem arquivos HTML e CSS, pois o objetivo era apenas praticar a sintaxe e lógica de recursos da linguagem, como: funções, manipulação de DOM, consumo de API, orientação a objetos e tratamento de erros.
+
+The JavaScript exercises were completed during a basic-intermediate course at Digital Innovation One (DIO). These exercises do not include HTML and CSS files, as the objective was solely to practice the syntax and logic of language features, such as functions, manipulation of the Document Object Model (DOM), API consumption, object-oriented programming, and error handling.
+
 # PHP
 Os exercícios de PHP fazem parte da disciplina "Desenvolvimento Web 1" do curso de análise e desenvolvimento de sistemas na UFPR. Estes exercícios buscam desenvolver não só a sintaxe e lógica do PHP, mas também conceitos básicos de back-end. Para a resolução dos exercícios utilizei o servidor Apache.
 
